@@ -1,14 +1,28 @@
-<h1>Smile</h1>
-<br>
+<div class="home-banner">
+  <h1>LeWagonBar</h1>
+</div>
 
-<ul>
-  <% @cocktails.each do |cocktail| %>
-    <li>
-      <h2><%= cocktail.name %></h2>
-      <%= link_to 'cocktail recipe', cocktail_path(cocktail.id) %>
-    </li>
-    <br>
-  <% end %>
-</ul>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12">
 
-<%= link_to 'Add a new cocktail to that list', new_cocktail_path, class: "btn btn-primary" %>
+      <br>
+      <h1>Pick a cocktail</h1>
+      <br>
+
+      <ul style="list-style: none;">
+        <% @cocktails.each do |cocktail| %>
+          <li>
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+              <h2><%= cocktail.name %></h2>
+              <%= link_to 'cocktail recipe', cocktail_path(cocktail.id) %>
+            </div>
+          </li>
+          <br>
+        <% end %>
+      </ul>
+
+      <%= link_to 'Add a new cocktail to that list', new_cocktail_path, class: "btn btn-primary" %>
+    </div>
+  </div>
+</div>

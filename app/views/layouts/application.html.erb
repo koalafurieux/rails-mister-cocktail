@@ -13,10 +13,11 @@
   </head>
 
   <body>
+    <%= render 'shared_components/navbar' %>
     <%= yield %>
-
-
+    <br><br>
     <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
     <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
+    <%= render 'shared_components/footer' %>
   </body>
 </html>
